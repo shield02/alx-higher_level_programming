@@ -9,4 +9,5 @@
 > 6-concat - Script to concat and print two strings
 > 7-edges - Script to extract a string from different positions
 > 8-concat_edges - Script to slice a string, concat and print
+> 9-easter_egg - Script to print "The Zen of Python" by TimPeters
 
