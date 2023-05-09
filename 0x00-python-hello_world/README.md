@@ -13,4 +13,5 @@
 > 100-write - Script to write to stderr, and exit with status code 1
 > 102-magic_calculation - Script to print some python bytecode'
 > 101-compile - Script that compiles a Python script
+> 10-check_cycle - Script that checks for cycle in singly linked list
 
