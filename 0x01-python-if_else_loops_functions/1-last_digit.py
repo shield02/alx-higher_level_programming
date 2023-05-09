@@ -5,8 +5,8 @@ lastd = int(str(number)[-1])
 less6 = 'and is less than 6 and not 0'
 if number < 0 and lastd != 0:
     print(f'Last digit of {number:d} is {str(number)[0]}{lastd:d} {less6}')
-elif number < 0 and int(str(number)[-1]) == 0:
-    print(f'Last digit of {number:d} is {lastd:d} {less6}')
+elif number < 0 and lastd == 0:
+    print(f'Last digit of {number:d} is {lastd:d} and is 0')
 elif lastd == 0:
     print(f'Last digit of {number:d} is {lastd:d} and is 0')
 elif lastd > 5:
