@@ -11,4 +11,5 @@
 > 8-concat_edges - Script to slice a string, concat and print
 > 9-easter_egg - Script to print "The Zen of Python" by TimPeters
 > 100-write - Script to write to stderr, and exit with status code 1
+> 102-magic_calculation - Script to print some python bytecode'
 
