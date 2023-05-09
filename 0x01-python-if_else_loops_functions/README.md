@@ -1,2 +1,4 @@
 ## 0x01 Python - if/else, loops, functions
+> 0-positive_or_negative - Script that assigns a rondom signed number to a 
+variable and checks if the number is zero, positive, or negative
 
