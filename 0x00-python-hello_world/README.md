@@ -10,4 +10,5 @@
 > 7-edges - Script to extract a string from different positions
 > 8-concat_edges - Script to slice a string, concat and print
 > 9-easter_egg - Script to print "The Zen of Python" by TimPeters
+> 100-write - Script to write to stderr, and exit with status code 1
 
