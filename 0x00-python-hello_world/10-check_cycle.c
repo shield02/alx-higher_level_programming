@@ -17,7 +17,7 @@ int check_cycle(listint_t *list)
 		return (0);
 
 	checklist = list;
-	for(k = 0; checklist->next != NULL; k++)
+	for (k = 0; checklist->next != NULL; k++)
 	{
 		checklist = checklist->next;
 		if (k > 100)
