@@ -5,3 +5,4 @@ variable and checks if the number is zero, positive, or negative
 print it as part of a string
 > 2-print_alphabet - Script that prints all the alphabets in lowercase
 > 3-print_alphabt - Script that prints all the alphabets in lowercase except q and e
+> 4-print_hexa - Script that prints all numbersfrom 0 to 98 with their hexadecimal
