@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-for x in range(0, 9):
-    for w in range(x + 1, 10):
-        print("{}{}".format(x, w), end="")
-        print((", ", "\n")[x == 8 and w == 9], end="")
+for a in range(0, 9):
+    for b in range(a + 1, 10):
+        print("{}{}".format(a, b), end="")
+        print((", ", "\n")[a == 8 and b == 9], end="")
