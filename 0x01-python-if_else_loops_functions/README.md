@@ -10,3 +10,4 @@
 > 8-uppercase - Script to print a string in uppercase
 > 9-print_last_digit - Script that prints the last digit of a number
 > 10-add - Script that adds two integers
+> 11-pow - Script that computes a to the power of b
