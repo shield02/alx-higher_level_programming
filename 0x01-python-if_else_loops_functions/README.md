@@ -11,3 +11,4 @@
 > 9-print_last_digit - Script that prints the last digit of a number
 > 10-add - Script that adds two integers
 > 11-pow - Script that computes a to the power of b
+> 12-fizzbuzz - Script that prints the numbers from 1 to 100 seperated by a space
