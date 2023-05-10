@@ -7,3 +7,4 @@
 > 5-print_comb2 - Script that prints numbers from 0 to 99 as two digits in ascending order
 > 6-print_combo3 - Script that prints all possible combinations of two digits
 > 7-islower - Script that checks for lowercase letters
+> 8-uppercase - Script to print a string in uppercase
