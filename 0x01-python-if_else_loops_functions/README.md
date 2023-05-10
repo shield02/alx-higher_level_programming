@@ -5,4 +5,4 @@
 > 3-print_alphabt - Script that prints all the alphabets in lowercase except q and e
 > 4-print_hexa - Script that prints all numbersfrom 0 to 98 with their hexadecimal
 > 5-print_comb2 - Script that prints numbers from 0 to 99 as two digits in ascending order
-<!-- > 6-print_combo3 - Script that prints all possible combinations of two digits -->
+> 6-print_combo3 - Script that prints all possible combinations of two digits
