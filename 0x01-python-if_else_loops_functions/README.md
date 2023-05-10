@@ -12,3 +12,4 @@
 > 10-add - Script that adds two integers
 > 11-pow - Script that computes a to the power of b
 > 12-fizzbuzz - Script that prints the numbers from 1 to 100 seperated by a space
+> 100-print_tebahpla - Script that the ASCII alphabet in reverse order, alternating lowercase and uppercase
