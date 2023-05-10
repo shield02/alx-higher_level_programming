@@ -14,3 +14,4 @@
 > 12-fizzbuzz - Script that prints the numbers from 1 to 100 seperated by a space
 > 100-print_tebahpla - Script that the ASCII alphabet in reverse order, alternating lowercase and uppercase
 > 101-remove_char_at - Script that creates a copy of a string, removing character at a given position
+> 102-magic_calculation - Script that creates a magic code similar to byte code
