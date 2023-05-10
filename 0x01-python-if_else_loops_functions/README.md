@@ -9,3 +9,4 @@
 > 7-islower - Script that checks for lowercase letters
 > 8-uppercase - Script to print a string in uppercase
 > 9-print_last_digit - Script that prints the last digit of a number
+> 10-add - Script that adds two integers
