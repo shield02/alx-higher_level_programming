@@ -5,3 +5,5 @@
 > 2-args - Script that prints the number of and the list of its arguements
 > 3-infinite_add - Script that prints the result of the addition of all arguments
 > 4-hidden_discovery - Script that prints all the names in a comiled module
+> 5-variable_load - Script that imports a variable from a file and prints its value
+
