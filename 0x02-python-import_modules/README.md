@@ -6,4 +6,5 @@
 > 3-infinite_add - Script that prints the result of the addition of all arguments
 > 4-hidden_discovery - Script that prints all the names in a comiled module
 > 5-variable_load - Script that imports a variable from a file and prints its value
+> 100-my_calculator - Script that imports all functions from a file and handles basic operation
 
