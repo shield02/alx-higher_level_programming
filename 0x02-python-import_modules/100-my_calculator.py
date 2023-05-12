@@ -12,13 +12,13 @@ if __name__ == "__main__":
     b = int(args[3])
 
     def get_operator(argument):
-        sign = {
+        opr_sym = {
             "+": add(a, b),
             "-": sub(a, b),
             "*": mul(a, b),
             "/": div(a, b)
         }
-        return (sign.get(argument))
+        return (opr_sym.get(argument))
     if args[2] in ('+', '-', '*', '/'):
         print("{} {} {} = {}".format(a, operators, b, get_operator(operators)))
     else:
