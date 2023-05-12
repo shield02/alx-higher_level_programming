@@ -8,4 +8,5 @@
 > 5-variable_load - Script that imports a variable from a file and prints its value
 > 100-my_calculator - Script that imports all functions from a file and handles basic operation
 > 101-easy_print - Script that prints a string without using print statement
+> 103-fast_alphabet - Script that prints the alphabets in uppercase
 
