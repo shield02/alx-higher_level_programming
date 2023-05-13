@@ -8,4 +8,4 @@ def element_at(my_list, idx):
         elif(idx > list_len):
             return None
         else:
-            return my_list[idx]
+            return int(my_list[idx])
