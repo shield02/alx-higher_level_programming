@@ -10,4 +10,5 @@
 > 7-add_tuple - Script that adds two tuples
 > 8-multiple_returns - Script that finds the length of a string and first letter
 > 9-max_integer - Script that finds the biggest integer of a list
+> 10-divisible_by_2 - Script that finds all multiples of 2 in a list
 
