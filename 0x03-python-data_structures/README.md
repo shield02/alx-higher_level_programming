@@ -8,3 +8,5 @@
 > 5-no_c - Script that removes all 'c' and 'C' from a string
 > 6-print_matrix_integer - Script that prints a matrix of integers
 > 7-add_tuple - Script that adds two tuples
+> 8-multiple_returns - Script that finds the length of a string and first letter
+
