@@ -9,4 +9,5 @@
 > 6-print_matrix_integer - Script that prints a matrix of integers
 > 7-add_tuple - Script that adds two tuples
 > 8-multiple_returns - Script that finds the length of a string and first letter
+> 9-max_integer - Script that finds the biggest integer of a list
 
