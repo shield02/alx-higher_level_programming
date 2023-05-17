@@ -4,5 +4,6 @@
 > 1-search_replace - Script that searches for an element and replaces it with a new element
 > 2-uniq_add - Script that adds all unique items in a list
 > 3-common_elements - Script that finds common elements in two sets and makes a new list
-> 4-only_diff_elements - Script to create a list of intersection of two sets
+> 4-only_diff_elements - Script that creates a list of intersection of two sets
+> 5-number_keys - Script that counts the number of keys in a dictionary
 
