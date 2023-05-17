@@ -14,4 +14,5 @@
 > 11-multiply_list_map - Script that uses map to multiply each value of a dictionary by a certain number
 > 100-weight_average - Script that finds the weighted average of a list of tuples
 > 101-square_matirx_map - Script that computes the square of all integer values of a matrix using map
+> 102-complex_delete - Script that deletes key with a specific value in a dictionary
 
