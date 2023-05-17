@@ -6,5 +6,6 @@
 > 3-common_elements - Script that finds common elements in two sets and makes a new list
 > 4-only_diff_elements - Script that creates a list of intersection of two sets
 > 5-number_keys - Script that counts the number of keys in a dictionary
-> 6-print_sorted_dictionary.py - Script that sorts the keys of a dictionary
+> 6-print_sorted_dictionary - Script that sorts the keys of a dictionary
+> 7-update_dictionary - Script to update a dictionary if key exist or add new if doesn't
 
