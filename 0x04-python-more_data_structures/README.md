@@ -10,4 +10,5 @@
 > 7-update_dictionary - Script that update a dictionary if key exist or add new if doesn't
 > 8-simple_delete - Script that deletes a key from a dictionary, dictionary remains unchanged if key doesn't exist
 > 9-multiply_by_2 - Script that multiplies all values in a dictionary by 2
+> 10-best_score - Script that finds the key of the highest value
 
