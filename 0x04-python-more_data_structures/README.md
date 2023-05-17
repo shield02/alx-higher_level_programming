@@ -12,4 +12,5 @@
 > 9-multiply_by_2 - Script that multiplies all values in a dictionary by 2
 > 10-best_score - Script that finds the key of the highest value
 > 11-multiply_list_map - Script that uses map to multiply each value of a dictionary by a certain number
+> 100-weight_average - Script that finds the weighted average of a list of tuples
 
