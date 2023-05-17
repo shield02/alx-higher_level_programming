@@ -7,5 +7,6 @@
 > 4-only_diff_elements - Script that creates a list of intersection of two sets
 > 5-number_keys - Script that counts the number of keys in a dictionary
 > 6-print_sorted_dictionary - Script that sorts the keys of a dictionary
-> 7-update_dictionary - Script to update a dictionary if key exist or add new if doesn't
+> 7-update_dictionary - Script that update a dictionary if key exist or add new if doesn't
+> 8-simple_delete - Script that deletes a key from a dictionary, dictionary remains unchanged if key doesn't exist
 
