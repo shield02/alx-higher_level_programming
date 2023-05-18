@@ -9,4 +9,4 @@ def roman_to_int(roman_string):
             res += roman_dict[roman_string[i]] - 2 * roman_dict[roman_string[i - 1]]
         else:
             res += roman_dict[roman_string[i]]
-    return res
+    return int(res)
