@@ -15,4 +15,4 @@
 > 100-weight_average - Script that finds the weighted average of a list of tuples
 > 101-square_matirx_map - Script that computes the square of all integer values of a matrix using map
 > 102-complex_delete - Script that deletes key with a specific value in a dictionary
-
+> 12-roman_to_int - Script that convert roman numeral to integer
