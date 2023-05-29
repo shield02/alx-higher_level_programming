@@ -6,4 +6,5 @@
 3-safe_print_division - Script safely prints division of two integers
 4-list_division - Script that divides two list element by element
 5-raise_exception - Script that raises a type exception
+6-raise_exception_msg - Script that raises exception with a message
 
