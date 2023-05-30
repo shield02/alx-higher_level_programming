@@ -9,4 +9,4 @@
 6-raise_exception_msg - Script that raises exception with a message
 100-safe_print_integer_err - Script to print error safely
 101-safe_function - Script safely executes a function
-
+102-magic_calculation - Script print a ByteCode
