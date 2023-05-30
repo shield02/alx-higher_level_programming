@@ -3,7 +3,6 @@
 # Define an empty class
 class Square:
     """This is an empty square class that defines nothing
-
     This is simply an empty class with nothing in it.
 
     Args:
