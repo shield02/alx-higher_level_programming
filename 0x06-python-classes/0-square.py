@@ -1,14 +1,15 @@
 #!/usr/bin/python3
+
+# Define an empty class
 class Square:
-    """This is an empty class
+    """This is an empty square class that defines nothing
 
     This is simply an empty class with nothing in it.
 
     Args:
-        None
+        This class has no arguments
 
     Attributes:
-        None
-
+        This class has no attributes
     """
     pass
