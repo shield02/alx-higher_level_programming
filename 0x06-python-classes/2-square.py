@@ -1,0 +1,17 @@
+#!/usr/bin/python3
+""" Define an empty class Square"""
+
+
+class Square:
+    """ Empty class with size private attribute"""
+    def __init__(self, size=0):
+        """
+            Instantiate the class
+        Args:
+            size: size property of the square
+        """
+        if type(size) is not int:
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = size
