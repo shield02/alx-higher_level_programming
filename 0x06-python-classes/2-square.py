@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-""" Define an empty class Square"""
+""" Define an empty class"""
 
 
 class Square:
-    """ Empty class with size private attribute"""
+    """ This is an empty class with size private attribute """
     def __init__(self, size=0):
         """
             Instantiate the class
