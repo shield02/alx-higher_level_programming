@@ -21,29 +21,29 @@ class Square:
         if hasattr(other, 'size'):
             return self.__size == other.__size
         return self.__size == other
-    
+
     def __ne__(self, other):
         """ Not equal to another square"""
         return self.area() != other.area()
-    
+
     def __gt__(self, other):
         """ Square greater than another square"""
         if hasattr(other, 'size'):
             return self.__size > other.__size
         return self.area() > other.area()
-    
+
     def __ge__(self, other):
         """ Square greater than or equal to another square"""
         if hasattr(other, 'size'):
             return self.__size >= other.__size
         return self.area() >= other.area()
-    
+
     def __lt__(self, other):
         """ Square less than another square"""
         if hasattr(other, 'size'):
             return self.__size < other.__size
         return self.area() < other.area()
-    
+
     def __le__(self, other):
         """ Square less than or equal to another square"""
         if hasattr(other, 'size'):
