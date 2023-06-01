@@ -4,7 +4,7 @@
 
 class Square:
     """ This is an empty class with size private attribute """
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         """
             Instantiate the class
         Args:
