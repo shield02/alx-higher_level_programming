@@ -8,4 +8,5 @@
 > 5-square - Script that adds printing of a square based on size property
 > 6-square - Script that adds position feature to the square
 > 101-square - Script that defines a square class with it intance properties
+> 102-square - Script that defines a square and handle comparators based on the area
 <!-- > 100-singly_linked_list - Script that defines a node of sinlgy linked list -->
