@@ -7,6 +7,7 @@
 > 4-rectangle - Script that reproduces a class object
 > 5-rectangle - Script that handles a string message when a class object is deleted
 > 6-rectangle - Script that has a public class instance attribute
+> 7-rectangle - Script that adds a public class instance attribute used to print a string
 
 
 
