@@ -5,6 +5,7 @@
 > 2-rectangle - Script that calculates the area & perimeter
 > 3-rectangle - Script that prints the string rep of the class object
 > 4-rectangle - Script that reproduces a class object
+> 5-rectangle - Script that handles a string message when a class object is deleted
 
 
 
