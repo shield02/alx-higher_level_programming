@@ -7,18 +7,18 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """ Initialize class with width and height"""
-        self.__height = height
-        self.__width = width
+        self.height = height
+        self.width = width
 
     @property
     def height(self):
         """ Get the height property"""
-        return self.__height
+        return self.height
 
     @property
     def width(self):
         """ Get the width property"""
-        return self.__width
+        return self.width
 
     @width.setter
     def width(self, value):
