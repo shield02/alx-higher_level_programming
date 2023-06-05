@@ -4,6 +4,8 @@
 > 1-rectangle - Script that defines width and height private class property
 > 2-rectangle - Script that calculates the area & perimeter
 > 3-rectangle - Script that prints the string rep of the class object
+> 4-rectangle - Script that reproduces a class object
+
 
 
 
