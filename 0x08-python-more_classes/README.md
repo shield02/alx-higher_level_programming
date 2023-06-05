@@ -3,3 +3,7 @@
 > 0-rectangle - Script that creates an empty class
 > 1-rectangle - Script that defines width and height private class property
 > 2-rectangle - Script that calculates the area & perimeter
+> 3-rectangle - Script that prints the string rep of the class object
+
+
+
