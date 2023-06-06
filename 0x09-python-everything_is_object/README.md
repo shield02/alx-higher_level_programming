@@ -20,3 +20,4 @@
 * 17-answer - List incrementation using function, bad way
 * 18-answer - List assignment with function, didn't work
 * 19-copy_list - Code to copy a list object
+* 20-answer - Is a tuple, yes
