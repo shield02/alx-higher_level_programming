@@ -11,3 +11,4 @@
 * 8-answer - Comparing is really equal
 * 9-answer - Comparing strings for really equal using 'is'
 * 10-answer - Comparing two list with ==
+* 11-answer - Comparing two list with 'is'
