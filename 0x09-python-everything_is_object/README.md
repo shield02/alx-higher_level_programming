@@ -19,3 +19,4 @@
 * 16-answer - Incrementing a variable using a function, bad way
 * 17-answer - List incrementation using function, bad way
 * 18-answer - List assignment with function, didn't work
+* 19-copy_list - Code to copy a list object
