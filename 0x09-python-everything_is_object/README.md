@@ -23,3 +23,4 @@
 * 20-answer - Is a tuple, yes
 * 21-answer - Is a tuple, yes
 * 22-answer - Is not a tuple, no
+* 23-answer - Is a tuple, yes
