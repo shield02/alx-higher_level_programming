@@ -4,3 +4,4 @@
 * 1-answer - Function to get a variable identifier
 * 2-answer - Comparing two variables
 * 3-answer - Comparing two variables
+* 4-answer - Comparing two variables with =
