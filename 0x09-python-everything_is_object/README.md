@@ -15,3 +15,4 @@
 * 12-answer - Comparing two list pointer with ==
 * 13-answer - Comparing two list pointer with is
 * 14-answer - Checking list value after append
+* 15-answer - Adding a list with + and checking a copy version
