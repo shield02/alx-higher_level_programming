@@ -2,3 +2,4 @@
 
 * 0-answer - Function that prints the type of an object
 * 1-answer - Function to get a variable identifier
+* 2-answer - Comparing two variables
