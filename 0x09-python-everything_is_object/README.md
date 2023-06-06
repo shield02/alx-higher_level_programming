@@ -6,3 +6,4 @@
 * 3-answer - Comparing two variables
 * 4-answer - Comparing two variables with =
 * 5-answer - Right count pointer
+* 6-answer - Comparing two strings with ==
