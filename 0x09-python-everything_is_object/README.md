@@ -29,3 +29,5 @@
 * 26-answer - Comparing two empty tuple objects
 * 27-answer - Adding to a list and checking the address
 * 28-answer - Incrementing a list but doesn't change address
+* 29-magic_string - Code to print a string the same number of iterrations
+* 101-locked_class - Code to create a locked class
