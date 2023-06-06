@@ -10,3 +10,4 @@
 > 7-rectangle - Script that adds a public class instance attribute used to print a string
 > 8-rectangle - Script that compares the area of two rectangle objects
 > 9-rectangle - Script that returns the instance of the object
+> 101-nqueens - Script or the nqueens game
