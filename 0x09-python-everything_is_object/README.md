@@ -9,3 +9,4 @@
 * 6-answer - Comparing two strings with ==
 * 7-answer - Comparing two strings with 'is'
 * 8-answer - Comparing is really equal
+* 9-answer - Comparing strings for really equal using 'is'
