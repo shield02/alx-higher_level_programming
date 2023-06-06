@@ -14,3 +14,4 @@
 * 11-answer - Comparing two list with 'is'
 * 12-answer - Comparing two list pointer with ==
 * 13-answer - Comparing two list pointer with is
+* 14-answer - Checking list value after append
