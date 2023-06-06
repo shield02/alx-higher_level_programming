@@ -18,3 +18,4 @@
 * 15-answer - Adding a list with + and checking a copy version
 * 16-answer - Incrementing a variable using a function, bad way
 * 17-answer - List incrementation using function, bad way
+* 18-answer - List assignment with function, didn't work
