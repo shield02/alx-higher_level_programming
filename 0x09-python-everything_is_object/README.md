@@ -8,3 +8,4 @@
 * 5-answer - Right count pointer
 * 6-answer - Comparing two strings with ==
 * 7-answer - Comparing two strings with 'is'
+* 8-answer - Comparing is really equal
