@@ -27,3 +27,4 @@
 * 24-answer - Comparing what looks like a tuple
 * 25-answer - Comparing two tuple objects
 * 26-answer - Comparing two empty tuple objects
+* 27-answer - Adding to a list and checking the address
