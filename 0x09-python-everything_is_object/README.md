@@ -26,3 +26,4 @@
 * 23-answer - Is a tuple, yes
 * 24-answer - Comparing what looks like a tuple
 * 25-answer - Comparing two tuple objects
+* 26-answer - Comparing two empty tuple objects
