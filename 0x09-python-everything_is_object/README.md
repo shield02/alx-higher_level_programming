@@ -22,4 +22,4 @@
 * 19-copy_list - Code to copy a list object
 * 20-answer - Is a tuple, yes
 * 21-answer - Is a tuple, yes
-* 22-answer - Is a tuple, yes
+* 22-answer - Is not a tuple, no
