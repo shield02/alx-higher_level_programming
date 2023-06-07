@@ -31,3 +31,4 @@
 * 28-answer - Incrementing a list but doesn't change address
 * 29-magic_string - Code to print a string the same number of iterrations
 * 101-locked_class - Code to create a locked class
+* 100-magic_string - Code that returns a string the number of times a loop runs
