@@ -1,5 +1,5 @@
 ===========================
-How to Use 0-add_integer.py
+0-add_integer.py
 ===========================
 
 This module defines integer addition function ``add_integer(a, b=98)``.
