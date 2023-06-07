@@ -4,8 +4,9 @@
 
 This module defines integer addition function ``add_integer(a, b=98)``.
 
-Usage
-=====
+==========
+How to use
+==========
 
 ``add_integer(...)``` 
 returns the addition of the two arguments. For numbers, that value is 
