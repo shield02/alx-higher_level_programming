@@ -44,4 +44,4 @@
 * 106-line2 - String objects created after executing second line
 * 106-line3 - String object pointed to by a is deleted
 * 106-line4 - String object pointed to by b is deleted
-
+* 106-line5 - String objects are created by the execution of the last line of the script
