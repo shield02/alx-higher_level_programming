@@ -40,4 +40,5 @@
 * 104-line3 - Int object pointed at is deleted
 * 104-line4 - Int object pointed at is deleted
 * 104-line5 - Int created by executing last line of the script
+* 106-line1 - String objects created after executing first line
 
