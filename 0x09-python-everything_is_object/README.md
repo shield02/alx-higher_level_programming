@@ -37,4 +37,5 @@
 * 105-line1 - Objects left in memory after first print
 * 104-line1 - Int object created by executing the first line of the script
 * 104-line2 - Int object created by executing the second line of the script
+* 104-line3 - Int object pointed at is deleted
 
