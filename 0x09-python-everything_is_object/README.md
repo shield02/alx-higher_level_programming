@@ -34,3 +34,5 @@
 * 100-magic_string - Code that returns a string the number of times a loop runs
 * 103-line1 - Objects created by executing first line
 * 103-line2 - Objects created by executing second line
+* 105-line1 - Objects left in memory after first print
+
