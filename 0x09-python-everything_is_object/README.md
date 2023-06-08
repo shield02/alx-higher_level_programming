@@ -38,4 +38,5 @@
 * 104-line1 - Int object created by executing the first line of the script
 * 104-line2 - Int object created by executing the second line of the script
 * 104-line3 - Int object pointed at is deleted
+* 104-line4 - Int object pointed at is deleted
 
