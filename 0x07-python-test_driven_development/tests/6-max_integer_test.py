@@ -1,12 +1,6 @@
-#!/usr/bin/python3
-""" Unittest for max_intger
-This test will test a function that returns
-the max value in a list or None for empty list
+"""Unittest for max_integer([..])
 """
-
 import unittest
-
-# Import test file
 max_integer = __import__('6-max_integer').max_integer
 
 
