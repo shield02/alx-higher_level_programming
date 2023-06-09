@@ -46,6 +46,20 @@ class TestMaxInteger(unittest.TestCase):
         """Test an empty string."""
         self.assertEqual(max_integer(""), None)
 
+    def test_ordered_list(self):
+        """Test a list of ordered integers."""
+        ordered = [1, 2, 3, 4]
+        self.assertEqual(max_integer(ordered), 4)
+
+    def test_unordered_list(self):
+        """Test a list of unordered integers."""
+        unordered = [1, 2, 4, 3]
+        self.assertEqual(max_integer(unordered), 4)
+
+    def test_max_at_begginning(self):
+        """Test a list that begin with the max value."""
+        max_at_beginning = [4, 3, 2, 1]
+        self.assertEqual(max_integer(max_at_beginning), 4)
 
 if __name__ == '__main__':
     unittest.main()
