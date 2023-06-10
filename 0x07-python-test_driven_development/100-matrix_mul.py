@@ -30,10 +30,10 @@ def matrix_mul(m_a, m_b):
     if m_b == [] or m_b == [[]]:
         raise ValueError("m_b can't be empty")
     if not all(isinstance(elem, int) or isinstance(elem, float)
-            for elem in [elem for row in m_a for elem in row]):
+               for elem in [elem for row in m_a for elem in row]):
         raise TypeError("m_a should contain only integers or floats")
     if not all(isinstance(elem, int) or isinstance(elem, float)
-            for elem in [elem for row in m_b for elem in row]):
+               for elem in [elem for row in m_b for elem in row]):
         raise TypeError("m_b should contain only integers or floats")
     if not all(len(row) == len(m_a[0]) for row in m_a):
         raise TypeError("each row of m_a must be of the same size")
@@ -60,4 +60,3 @@ def matrix_mul(m_a, m_b):
         res_mat.append(nr)
 
     return res_mat
-    
