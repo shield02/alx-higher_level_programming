@@ -42,5 +42,22 @@ def matrix_mul(m_a, m_b):
     if len(m_a[0]) != len(m_b):
         raise ValueError("m_a and m_b can't be multiplied")
 
+    m_b_i = []
+    for r in range(len(m_b[0])):
+        nr = []
+        for c in range(len(m_b)):
+            nr.append(m_b[c][r])
+        m_b_i.append(nr)
 
+    res_mat = []
+    for row in m_a:
+        nr = []
+        for col in m_b_i:
+            mul_r = 0
+            for i in range(len(m_b_i[0])):
+                mul_r += row[i] * col[i]
+            nr.append(mul_r)
+        res_mat.append(nr)
+
+    return res_mat
     
