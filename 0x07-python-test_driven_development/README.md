@@ -7,3 +7,4 @@
 * 5-text_indentation - Code to indent a text based on some chars
 * 6-max_intger_test - Test cases to testing of max integer in list
 * 100-matrix_mul - Code to multiply two matrices
+* 101-lazy_matrix_mul - Code to multiply two matrices using Numpy library
