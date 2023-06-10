@@ -11,6 +11,8 @@ returns a new matrix
 
 ``m_a`` by ``m_b``.
 ===================
+
+    >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
     >>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
     [[7, 10], [15, 22]]
 
