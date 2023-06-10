@@ -6,3 +6,4 @@
 * 4-print_square - Code to print a square using #
 * 5-text_indentation - Code to indent a text based on some chars
 * 6-max_intger_test - Test cases to testing of max integer in list
+* 100-matrix_mul - Code to multiply two matrices
