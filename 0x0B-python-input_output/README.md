@@ -7,3 +7,4 @@
 4-from_json_string - Code to represent a JSON string as object
 5-save_to_json_file - Code to write object to a text file
 6-load_from_json_file - Code to create an object from a JSON file
+7-add_item - Code to add all arguments to a list and save them to a file
