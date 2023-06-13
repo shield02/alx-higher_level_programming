@@ -6,3 +6,4 @@
 3-to_json_string - Code to represent a string object as JSON
 4-from_json_string - Code to represent a JSON string as object
 5-save_to_json_file - Code to write object to a text file
+6-load_from_json_file - Code to create an object from a JSON file
