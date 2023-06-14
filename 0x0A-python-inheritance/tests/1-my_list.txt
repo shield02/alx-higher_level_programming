@@ -32,3 +32,11 @@ Import the class:
 >>> my_list = MyList([50, 2])
 >>> my_list.print_sorted()
 [2, 50]
+
+>>> my_list = MyList(["E", "R", "B"])
+>>> my_list.print_sorted()
+['B', 'E', 'R']
+
+>>> my_list = MyList(["DEF", "XYZ", "ABC"])
+>>> my_list.print_sorted()
+['ABC', 'DEF', 'XYZ']
