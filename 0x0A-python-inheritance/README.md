@@ -11,3 +11,4 @@
 * 8-rectangle - Rectangle class inheriting from BaseGeometry class
 * 9-rectangle - Implement str method and area method of rectangle class
 * 10-square - Square class inheriting from Rectangle class
+* 11-square - Implementing the str method that prints the string description of class
