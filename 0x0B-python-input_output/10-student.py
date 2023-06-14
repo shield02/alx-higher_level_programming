@@ -18,7 +18,7 @@ class Student:
     def to_json(self, attrs=None):
         """Dictionary description of the class instance
         Args:
-            Nothing
+            attrs: (str) - Optional, attrs of a class
         Raises:
             Nothing
         Return:
