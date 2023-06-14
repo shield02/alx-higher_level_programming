@@ -12,3 +12,4 @@
 * 9-rectangle - Implement str method and area method of rectangle class
 * 10-square - Square class inheriting from Rectangle class
 * 11-square - Implementing the str method that prints the string description of class
+* 100-my_int - Class that reverses equality and not equal
