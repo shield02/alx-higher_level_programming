@@ -7,3 +7,4 @@
 * 4-inherits_from - Code to check if object inherits from another class
 * 5-base_geometry - Code to declear a base geometry
 * 6-base_geometry - Add a public instance method to base geometry and raise exception
+* 7-base_geometry - Add a public instance method that validates
