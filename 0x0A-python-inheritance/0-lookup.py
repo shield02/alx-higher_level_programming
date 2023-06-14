@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Instance attributes and methods module"""
 
 
 def lookup(obj):
