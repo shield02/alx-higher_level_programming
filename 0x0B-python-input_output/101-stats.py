@@ -29,8 +29,10 @@ if __name__ == "__main__":
             else:
                 count += 1
 
+            line = line.split()
+
             try:
-                file_size += int(line.split()[-1])
+                file_size += int(line[-1])
             except (IndexError, ValueError):
                 pass
 
