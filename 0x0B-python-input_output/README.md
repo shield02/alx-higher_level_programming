@@ -8,3 +8,4 @@
 5-save_to_json_file - Code to write object to a text file
 6-load_from_json_file - Code to create an object from a JSON file
 7-add_item - Code to add all arguments to a list and save them to a file
+8-class_to_json - Code to get the dictionary description with simple data structure for JSON serialization of an object
