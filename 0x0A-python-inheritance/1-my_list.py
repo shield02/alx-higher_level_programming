@@ -13,6 +13,4 @@ class MyList(list):
         Returns:
             Sorted list
         """
-        sort_list = self[:]
-        sort_list.sort()
-        print(f"{sort_list}")
+        print(sorted(self))
