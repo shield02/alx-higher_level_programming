@@ -14,3 +14,4 @@
 11-student - Code to replace all attributes to student class
 12-pascal_triangle - Code to implement a pascal triangle
 100-append_after - Code to append a string to file after search string
+101-stats - Code to generate matrix from log messages
