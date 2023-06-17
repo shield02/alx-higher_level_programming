@@ -7,10 +7,10 @@ class Rectangle(Base):
     """Base class"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """Rectangle constructor"""
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
 
     @property
@@ -42,7 +42,7 @@ class Rectangle(Base):
             raise ValueError('width must be > 0')
         self.__width = width
 
-    @height.getter
+    @height.setter
     def height(self, height):
         """Set the value of the height attribute"""
         if type(height) is not int:
@@ -51,13 +51,13 @@ class Rectangle(Base):
             raise ValueError('height must be > 0')
         self.__height = height
 
-    @x.getter
+    @x.setter
     def x(self, x):
         """Set the value of x attribute"""
         if type(x) is not int:
             raise TypeError('x must be an integer')
-        if x <= 0:
-            raise ValueError('x must be > 0')
+        if x < 0:
+            raise ValueError('x must be >= 0')
         self.__x = x
 
     @y.setter
@@ -65,6 +65,6 @@ class Rectangle(Base):
         """Set the value of y attibute"""
         if type(y) is not int:
             raise TypeError('y must be an integer')
-        if y <= 0:
-            raise ValueError('y must be > 0')
+        if y < 0:
+            raise ValueError('y must be >= 0')
         self.__y = y
