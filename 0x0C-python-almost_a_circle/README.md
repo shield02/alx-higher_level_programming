@@ -1,3 +1,4 @@
 ## 0x0C. Python - Almost a circle
 
 * models/base - Base class to be inherited by subsequent classes
+* models/rectangle - Rectangle class to implement private instance/class variable with setters/getters
