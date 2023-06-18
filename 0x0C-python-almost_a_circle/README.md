@@ -4,3 +4,4 @@
 * models/rectangle - Rectangle class to implement private instance/class variable with setters/getters
 * models/rectangle - Updated the class to calculate the area
 * models/rectangle - Added display method to print the rectangle using # character
+* models/rectangle - Function to print string representation of the rectangle class
