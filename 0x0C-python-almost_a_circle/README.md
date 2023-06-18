@@ -5,3 +5,4 @@
 * models/rectangle - Updated the class to calculate the area
 * models/rectangle - Added display method to print the rectangle using # character
 * models/rectangle - Function to print string representation of the rectangle class
+* models/rectangle - Updated the display method taking of x and y
