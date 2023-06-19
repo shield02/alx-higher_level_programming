@@ -88,7 +88,7 @@ class Rectangle(Base):
         """Print string representation of the rectangle class"""
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Assigns arguments to each attribute
         Args:
             *args: any number of arguments
@@ -111,4 +111,17 @@ class Rectangle(Base):
                 self.x = args[3]
             if len(args) > 4:
                 self.y = args[4]
-            
+        else:
+            for attr, value in kwargs.items():
+                if attr == "id":
+                    if type(value) != int and value is not None:
+                        raise TypeError("id must be an int")
+                    self.id = value
+                if attr == "width":
+                    self.width = value
+                if attr == "height":
+                    self.height = value
+                if attr == "x":
+                    self.x = value
+                if attr == "y":
+                    self.y = value
