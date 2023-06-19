@@ -191,5 +191,16 @@ class TestRectangle(unittest.TestCase):
             rect.update(65, 89, "hi")
         self.assertEqual("height must be an integer", str(e.exception))
 
+    def test_update_kwargs(self):
+        """Test public method update with kwargs"""
+        rect = Rectangle(10, 10, 10, 10)
+        rect.update(height=1)
+        self.assertEqual(rect.height, 1)
+        rect.update(x=1, height=2, y=3, width=4)
+        self.assertEqual(rect.y, 3)
+        self.assertEqual(rect.width, 4)
+        self.assertEqual(rect.x, 1)
+        self.assertEqual(rect.height, 2)
+
 if __name__ == '__main__':
     unittest.main()
