@@ -245,5 +245,23 @@ class TestBase(TestCase):
             Rectangle.from_json_string({1: 'Hello', 2: 'Hi'})
         self.assertEqual("json_string must be a string", str(e.exception))
 
+    def test_from_json_to_string_wrong_agrs(self):
+        """Test static method from_json_string with wrong args."""
+        msg1 = ("from_json_string() missing 1" +
+              " required positional argument: 'json_string'")
+
+        with self.assertRaises(TypeError) as e:
+            Rectangle.from_json_string()
+        self.assertEqual(msg1, str(e.exception))
+
+        msg2 = ("from_json_string() takes 1 positional" +
+            " argument but 2 were given")
+
+        with self.assertRaises(TypeError) as e:
+            Rectangle.from_json_string("Hi", 98)
+        self.assertEqual(msg2, str(e.exception))
+
+    def 
+
 if __name__ == "__main__":
     TestCase.main()
