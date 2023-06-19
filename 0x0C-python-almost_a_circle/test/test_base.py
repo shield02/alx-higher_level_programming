@@ -318,13 +318,13 @@ class TestBase(TestCase):
         squares_output = Square.load_from_file()
         self.assertEqual(squares_output, [])
 
-    # def test_19_2(self):
-    #     """Test class method load_from_file with wrong args."""
+    def test_load_from_file_wrong_args(self):
+        """Test class method load_from_file with wrong args"""
+        msg = "load_from_file() takes 1 positional argument but 2 were given"
 
-    #     s = "load_from_file() takes 1 positional argument but 2 were given"
-    #     with self.assertRaises(TypeError) as x:
-    #         list_rectangles_output = Rectangle.load_from_file("Hello")
-    #     self.assertEqual(s, str(x.exception))
+        with self.assertRaises(TypeError) as e:
+            list_rectangles_output = Rectangle.load_from_file("Hello")
+        self.assertEqual(msg, str(e.exception))
 
 if __name__ == "__main__":
     TestCase.main()
