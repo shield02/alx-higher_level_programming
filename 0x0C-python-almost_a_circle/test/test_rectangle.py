@@ -107,7 +107,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual("y must be >= 0", str(e.exception))
 
     def test_area_normal_types(self):
-        """Test public method area with normal types."""
+        """Test public method area with normal types"""
         rect1 = Rectangle(3, 2)
         self.assertEqual(rect1.area(), 6)
         rect2 = Rectangle(75, 2)
@@ -116,7 +116,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rect3.area(), 56)
 
     def test_area_wrong_args(self):
-        """Test public method area with wrong args."""
+        """Test public method area with wrong args"""
         with self.assertRaises(TypeError) as e:
             rect1 = Rectangle(9, 5)
             rect1.area("Hello")
@@ -124,6 +124,16 @@ class TestRectangle(unittest.TestCase):
             "area() takes 1 positional argument but 2 were given",
             str(e.exception)
         )
+
+    def test_display(self):
+        """Test public method display"""
+        flush = io.StringIO()
+        rect1 = Rectangle(4, 5)
+        with contextlib.redirect_stdout(flush):
+            rect1.display()
+        s = flush.getvalue()
+        result = "####\n####\n####\n####\n####\n"
+        self.assertEqual(s, result)
 
 if __name__ == '__main__':
     unittest.main()
