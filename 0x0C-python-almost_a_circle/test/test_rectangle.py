@@ -52,7 +52,8 @@ class TestRectangle(unittest.TestCase):
             Rectangle(7)
         self.assertEqual(
             "__init__() missing 1 required positional argument: 'height'",
-            str(e.exception))
+            str(e.exception)
+        )
 
         msg = ("__init__() missing 2 required positional" +
              " arguments: 'width' and 'height'")
@@ -113,6 +114,16 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rect2.area(), 150)
         rect3 = Rectangle(8, 7, 0, 0, 12)
         self.assertEqual(rect3.area(), 56)
+
+    def test_area_wrong_args(self):
+        """Test public method area with wrong args."""
+        with self.assertRaises(TypeError) as e:
+            rect1 = Rectangle(9, 5)
+            rect1.area("Hello")
+        self.assertEqual(
+            "area() takes 1 positional argument but 2 were given",
+            str(e.exception)
+        )
 
 if __name__ == '__main__':
     unittest.main()
