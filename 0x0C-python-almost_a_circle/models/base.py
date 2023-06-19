@@ -71,6 +71,8 @@ class Base:
         Args:
             cls (string): class name
             **dictionary (dict): to be used as **kwargs
+        Returns:
+            (string): 
         """
         if dictionary != {} and dictionary:
             if cls.__name__ == 'Square':
@@ -79,3 +81,19 @@ class Base:
                 obj = cls(3, 5)
             obj.update(**dictionary)
             return obj
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of instances
+        Args:
+            cls (string): current class name using this method
+        Returns:
+            (list): list of instances
+        """
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, 'r') as f:
+                objs_dict = Base.from_json_string(f.read())
+                return [cls.create(**obj) for obj in objs_dict]
+        except IOError:
+            return []
