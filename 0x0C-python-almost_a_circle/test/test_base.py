@@ -379,6 +379,17 @@ class TestBase(TestCase):
             Rectangle.save_to_file_csv([Rectangle(12, 3), Rectangle(5, 8)], 76)
         self.assertEqual(msg2, str(e.exception))
 
+    def test_save_to_file_missing_file(self):
+        """Test class method load_from_file_csv with missing files"""
+        os.remove("Rectangle.csv")
+        os.remove("Square.csv")
+        os.remove("Base.csv")
+
+        rectangles_output = Rectangle.load_from_file_csv()
+        self.assertEqual(rectangles_output, [])
+
+        squares_output = Square.load_from_file_csv()
+        self.assertEqual(squares_output, [])
 
 if __name__ == "__main__":
     TestCase.main()
