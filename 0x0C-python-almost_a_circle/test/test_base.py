@@ -346,5 +346,25 @@ class TestBase(TestCase):
         with open("Square.csv", "r") as f:
             self.assertEqual(len(f.read()), len(result))
 
+    def test_save_to_file_csv_errors(self):
+        """Test class method save_to_file_csv with errors"""
+        with self.assertRaises(AttributeError) as e:
+            Base.save_to_file_csv([Base(3), Base(1)])
+        self.assertEqual(
+            "'Base' object has no attribute 'to_dictionary'",
+            str(e.exception))
+
+        with self.assertRaises(TypeError) as e:
+            Rectangle.save_to_file_csv([6, 7])
+        self.assertEqual(
+            "list_objs must be a list of instances",
+            str(e.exception))
+
+        with self.assertRaises(TypeError) as e:
+            Rectangle.save_to_file_csv(5.9)
+        self.assertEqual(
+            "list_objs must be a list of instances",
+            str(e.exception))
+
 if __name__ == "__main__":
     TestCase.main()
