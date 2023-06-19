@@ -105,5 +105,14 @@ class TestRectangle(unittest.TestCase):
             Rectangle(2, 8, 9, -65)
         self.assertEqual("y must be >= 0", str(e.exception))
 
+    def test_area_normal_types(self):
+        """Test public method area with normal types."""
+        rect1 = Rectangle(3, 2)
+        self.assertEqual(rect1.area(), 6)
+        rect2 = Rectangle(75, 2)
+        self.assertEqual(rect2.area(), 150)
+        rect3 = Rectangle(8, 7, 0, 0, 12)
+        self.assertEqual(rect3.area(), 56)
+
 if __name__ == '__main__':
     unittest.main()
