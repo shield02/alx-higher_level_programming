@@ -227,5 +227,14 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(type(rect2_dictionary), dict)
         self.assertFalse(rect1 == rect2)
 
+def test_to_dictionary_wrong_args(self):
+        """Test for public method to_dictionary with wrong args"""
+        msg = "to_dictionary() takes 1 positional argument but 2 were given"
+
+        with self.assertRaises(TypeError) as e:
+            rect = Rectangle(10, 2, 1, 9)
+            rect.to_dictionary("Hi")
+        self.assertEqual(msg, str(e.exception))
+
 if __name__ == '__main__':
     unittest.main()
