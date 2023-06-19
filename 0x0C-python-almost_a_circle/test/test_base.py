@@ -187,5 +187,19 @@ class TestBase(TestCase):
             str(e.exception)
         )
 
+    def test_save_to_file_wrong_args(self):
+        """Test class method save_to_file with wrong args"""
+        msg1 = ("save_to_file() missing 1 required" +
+              " positional argument: 'list_objs'")
+        with self.assertRaises(TypeError) as e:
+            Rectangle.save_to_file()
+        self.assertEqual(msg1, str(e.exception))
+
+        msg2 = ("save_to_file() takes 2 positional" +
+              " arguments but 3 were given")
+        with self.assertRaises(TypeError) as e:
+            Rectangle.save_to_file([Rectangle(9, 4), Rectangle(8, 9)], 98)
+        self.assertEqual(msg2, str(e.exception))
+
 if __name__ == "__main__":
     TestCase.main()
