@@ -11,3 +11,4 @@
 * models/rectangle - Added update method to take kwargs
 
 * models/square - Square class inheritting Rectangle class with constructor and `__str__` method
+* models/square - Added public setter and getter for size
