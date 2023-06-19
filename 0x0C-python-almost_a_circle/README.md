@@ -2,6 +2,7 @@
 
 * models/base - Base class to be inherited by subsequent classes
 * models/base - to_json_string - static method for JSON string serialization of dictionaries
+* models/base - save_to_file - class method for writing JSON string representation of list of objects to file
 
 * models/rectangle - Rectangle class to implement private instance/class variable with setters/getters
 * models/rectangle - Updated the class to calculate the area
