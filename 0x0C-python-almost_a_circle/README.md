@@ -7,3 +7,4 @@
 * models/rectangle - Function to print string representation of the rectangle class
 * models/rectangle - Updated the display method taking of x and y
 * models/rectangle - Added update method that takes variable args and update the class
+* models/rectangle - Added update method to take kwargs
