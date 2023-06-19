@@ -366,7 +366,7 @@ class TestBase(TestCase):
             "list_objs must be a list of instances",
             str(e.exception))
 
-    def test_save_to_file_wrong_args(self):
+    def test_save_to_file_csv_wrong_args(self):
         """Test class method save_to_file_csv with wrong args"""
         msg1 = ("save_to_file_csv() missing 1 required" +
               " positional argument: 'list_objs'")
@@ -379,7 +379,7 @@ class TestBase(TestCase):
             Rectangle.save_to_file_csv([Rectangle(12, 3), Rectangle(5, 8)], 76)
         self.assertEqual(msg2, str(e.exception))
 
-    def test_save_to_file_missing_file(self):
+    def test_load_from_file_csv_missing_file(self):
         """Test class method load_from_file_csv with missing files"""
         os.remove("Rectangle.csv")
         os.remove("Square.csv")
@@ -390,6 +390,14 @@ class TestBase(TestCase):
 
         squares_output = Square.load_from_file_csv()
         self.assertEqual(squares_output, [])
+
+    def test_load_from_file_csv_wrong_args(self):
+        """Test class method load_from_file_csv with wrong args"""
+        msg = "load_from_file_csv() takes 1 positional argument but 2 were given"
+
+        with self.assertRaises(TypeError) as e:
+            rectangles_output = Rectangle.load_from_file_csv("Hello")
+        self.assertEqual(msg, str(e.exception))
 
 if __name__ == "__main__":
     TestCase.main()
