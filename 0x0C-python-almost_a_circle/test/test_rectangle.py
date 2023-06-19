@@ -60,5 +60,14 @@ class TestRectangle(unittest.TestCase):
             Rectangle()
         self.assertEqual(msg, str(e.exception))
 
+    def test_inheritance(self):
+        """Test for inheritance"""
+        rect1 = Rectangle(7, 5)
+        self.assertTrue(isinstance(rect1, Base))
+        self.assertTrue(issubclass(Rectangle, Base))
+        self.assertFalse(isinstance(Rectangle, Base))
+
+
+
 if __name__ == '__main__':
     unittest.main()
