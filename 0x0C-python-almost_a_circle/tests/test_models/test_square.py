@@ -107,5 +107,25 @@ class TestSquare(unittest.TestCase):
             Square(2, 5, -5, 6)
         self.assertEqual("y must be >= 0", str(e.exception))
 
+    def test_square_update(self):
+        """Test public method update method on Square"""
+        square = Square(5)
+
+        square.update(10)
+        self.assertEqual(square.id, 10)
+
+        square.update(x=12)
+        self.assertEqual(square.x, 12)
+
+        square.update(size=7, id=89, y=1)
+        self.assertEqual(square.size, 7)
+        self.assertEqual(square.id, 89)
+        self.assertEqual(square.y, 1)
+
+        square.update()
+        self.assertEqual(square.size, 7)
+        self.assertEqual(square.id, 89)
+        self.assertEqual(square.y, 1)
+
 if __name__ == '__main__':
     unittest.main()
