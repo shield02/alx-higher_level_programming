@@ -6,6 +6,8 @@
 * models/base - from_json_string - static method that returns list of JSON string representation
 * models/base - create - create an instance of a class, use the update method to assign all attributes
 * models/base - load_from_file - returns a list of instances based on the current class
+* models/base - save_to_file_csv - serializes list of objects to csv file
+* models/base - load_from_file_csv - deserialise list of objects from a csv file
 
 * models/rectangle - Rectangle class to implement private instance/class variable with setters/getters
 * models/rectangle - Updated the class to calculate the area
