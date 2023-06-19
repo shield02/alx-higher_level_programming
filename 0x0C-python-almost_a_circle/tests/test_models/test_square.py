@@ -77,5 +77,35 @@ class TestSquare(unittest.TestCase):
         square2 = Square(9, 8, 7, 2)
         self.assertEqual(square2.size, 9)
 
+    def test_wrong_attr(self):
+        """Test for wrong attributes"""
+        with self.assertRaises(TypeError) as e:
+            Square("Hello", 2)
+        self.assertEqual("width must be an integer", str(e.exception))
+
+        with self.assertRaises(TypeError) as e:
+            Square(2, "World")
+        self.assertEqual("x must be an integer", str(e.exception))
+
+        with self.assertRaises(TypeError) as e:
+            Square(1, 2, "Foo", 3)
+        self.assertEqual("y must be an integer", str(e.exception))
+
+        with self.assertRaises(ValueError) as e:
+            Square(0, 2)
+        self.assertEqual("width must be > 0", str(e.exception))
+
+        with self.assertRaises(ValueError) as e:
+            Square(-1)
+        self.assertEqual("width must be > 0", str(e.exception))
+
+        with self.assertRaises(ValueError) as e:
+            Square(2, -3)
+        self.assertEqual("x must be >= 0", str(e.exception))
+
+        with self.assertRaises(ValueError) as e:
+            Square(2, 5, -5, 6)
+        self.assertEqual("y must be >= 0", str(e.exception))
+
 if __name__ == '__main__':
     unittest.main()
