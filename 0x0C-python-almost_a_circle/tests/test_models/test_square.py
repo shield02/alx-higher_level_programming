@@ -69,5 +69,13 @@ class TestSquare(unittest.TestCase):
         result = "####\n####\n####\n####\n"
         self.assertEqual(msg, result)
 
+    def test_size(self):
+        """Test for size attribute"""
+        square1 = Square(8)
+        self.assertEqual(square1.size, 8)
+
+        square2 = Square(9, 8, 7, 2)
+        self.assertEqual(square2.size, 9)
+
 if __name__ == '__main__':
     unittest.main()
