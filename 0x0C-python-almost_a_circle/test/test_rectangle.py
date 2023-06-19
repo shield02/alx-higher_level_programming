@@ -145,5 +145,15 @@ class TestRectangle(unittest.TestCase):
             str(e.exception)
         )
 
+    def test_string_rep(self):
+        """Test __str__ representation"""
+        flush = io.StringIO()
+        rect1 = Rectangle(4, 6, 2, 1, 12)
+        with contextlib.redirect_stdout(flush):
+            print(rect1)
+        s = flush.getvalue()
+        result = "[Rectangle] (12) 2/1 - 4/6\n"
+        self.assertEqual(s, result)
+
 if __name__ == '__main__':
     unittest.main()
