@@ -51,6 +51,23 @@ class TestSquare(unittest.TestCase):
             str(e.exception)
         )
 
+    def test_inherited_from_rect(self):
+        """Test Square for methods inherited from Rectangle"""
+        square1 = Square(9)
+        self.assertEqual(square1.area(), 81)
+
+        square2 = Square(4, 1, 2, 5)
+        square2.update(7)
+
+        self.assertEqual(square2.id, 7)
+        flush = io.StringIO()
+
+        square3 = Square(4)
+        with contextlib.redirect_stdout(flush):
+            square3.display()
+        msg = flush.getvalue()
+        result = "####\n####\n####\n####\n"
+        self.assertEqual(msg, result)
 
 if __name__ == '__main__':
     unittest.main()
