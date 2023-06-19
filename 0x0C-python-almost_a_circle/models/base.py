@@ -2,6 +2,8 @@
 """Base class module"""
 
 
+import json
+
 class Base:
     """Base class for the project
     To manage id attribute project wide and to avoid code duplication
@@ -22,3 +24,15 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """JSON string serialization of list of dictionaries
+        Args:
+            list_dictionaries (list): list of dictionaries
+        Returns:
+            JSON (str): 
+        """
+        if list_dictionaries == [] or list_dictionaries is None:
+            return "[]"
+        return json.dumps(list_dictionaries)
