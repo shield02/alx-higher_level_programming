@@ -118,8 +118,8 @@ class TestRectangle(unittest.TestCase):
     def test_area_wrong_args(self):
         """Test public method area with wrong args"""
         with self.assertRaises(TypeError) as e:
-            rect1 = Rectangle(9, 5)
-            rect1.area("Hello")
+            rect = Rectangle(9, 5)
+            rect.area("Hello")
         self.assertEqual(
             "area() takes 1 positional argument but 2 were given",
             str(e.exception)
@@ -128,9 +128,9 @@ class TestRectangle(unittest.TestCase):
     def test_display(self):
         """Test public method display"""
         flush = io.StringIO()
-        rect1 = Rectangle(4, 5)
+        rect = Rectangle(4, 5)
         with contextlib.redirect_stdout(flush):
-            rect1.display()
+            rect.display()
         s = flush.getvalue()
         result = "####\n####\n####\n####\n####\n"
         self.assertEqual(s, result)
@@ -138,8 +138,8 @@ class TestRectangle(unittest.TestCase):
     def test_display_wrong_args(self):
         """Test public method display with wrong args"""
         with self.assertRaises(TypeError) as e:
-            rect1 = Rectangle(11, 5)
-            rect1.display(11)
+            rect = Rectangle(11, 5)
+            rect.display(11)
         self.assertEqual(
             "display() takes 1 positional argument but 2 were given",
             str(e.exception)
@@ -148,11 +148,21 @@ class TestRectangle(unittest.TestCase):
     def test_string_rep(self):
         """Test __str__ representation"""
         flush = io.StringIO()
-        rect1 = Rectangle(4, 6, 2, 1, 12)
+        rect = Rectangle(4, 6, 2, 1, 12)
         with contextlib.redirect_stdout(flush):
-            print(rect1)
+            print(rect)
         s = flush.getvalue()
         result = "[Rectangle] (12) 2/1 - 4/6\n"
+        self.assertEqual(s, result)
+
+    def test_display_x_y(self):
+        """Test public method display with x and y"""
+        flush = io.StringIO()
+        rect = Rectangle(5, 2, 4, 4)
+        with contextlib.redirect_stdout(flush):
+            rect.display()
+        s = flush.getvalue()
+        result = "\n\n  ##\n  ##\n  ##\n"
         self.assertEqual(s, result)
 
 if __name__ == '__main__':
