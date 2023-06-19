@@ -9,6 +9,7 @@
 * models/rectangle - Updated the display method taking of x and y
 * models/rectangle - Added update method that takes variable args and update the class
 * models/rectangle - Added update method to take kwargs
+* models/rectangle - Added to_dictionary method that prints a dictionary representation of the rectangle class
 
 * models/square - Square class inheritting Rectangle class with constructor and `__str__` method
 * models/square - Added public setter and getter for size
