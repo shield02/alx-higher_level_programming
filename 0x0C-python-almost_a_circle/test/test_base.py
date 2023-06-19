@@ -3,12 +3,12 @@
 
 
 import os
-from unittest import TestCase
+import unittest
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
 
-class TestBase(TestCase):
+class TestBase(unittest.TestCase):
     """Test cases for Base class"""
 
     def setUp(self):
@@ -400,4 +400,4 @@ class TestBase(TestCase):
         self.assertEqual(msg, str(e.exception))
 
 if __name__ == "__main__":
-    TestCase.main()
+    unittest.main()
