@@ -261,7 +261,21 @@ class TestBase(TestCase):
             Rectangle.from_json_string("Hi", 98)
         self.assertEqual(msg2, str(e.exception))
 
-    def 
+    def test_create_normal_types(self):
+        """Test class method create with normal types."""
+        rect1 = Rectangle(3, 5, 1)
+        rect1_dictionary = rect1.to_dictionary()
+        rect2 = Rectangle.create(**rect1_dictionary)
+        self.assertEqual(str(rect1), str(rect2))
+        self.assertFalse(rect1 is rect2)
+        self.assertFalse(rect1 == rect2)
+
+        square1 = Square(3, 5)
+        square1_dictionary = square1.to_dictionary()
+        square2 = Square.create(**square1_dictionary)
+        self.assertEqual(str(square1), str(square2))
+        self.assertFalse(square1 is square2)
+        self.assertFalse(square1 == square2)
 
 if __name__ == "__main__":
     TestCase.main()
