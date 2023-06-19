@@ -1,12 +1,22 @@
 #!/usr/bin/python3
 """Rectangle base module"""
 
+
 from models.base import Base
 
 class Rectangle(Base):
-    """Base class"""
+    """Rectangle class
+    Inherits the Base class
+    """
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Rectangle constructor"""
+        """Rectangle constructor
+        Args:
+            width (int): value for width
+            height (int): value for height
+            x (int): value for x
+            y (y): value for y
+            id (int): unique number
+        """
         self.width = width
         self.height = height
         self.x = x
@@ -35,7 +45,10 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, width):
-        """Set the value of the width attribute"""
+        """Set the value of the width attribute
+        Args:
+            weight (int): value for weight attribute
+        """
         if type(width) is not int:
             raise TypeError('width must be an integer')
         if width <= 0:
@@ -44,7 +57,10 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, height):
-        """Set the value of the height attribute"""
+        """Set the value of the height attribute
+        Args:
+            height (int): value for height attribute
+        """
         if type(height) is not int:
             raise TypeError('height must be an integer')
         if height <= 0:
@@ -53,7 +69,10 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, x):
-        """Set the value of x attribute"""
+        """Set the value of x attribute
+        Args:
+            x (int): value for x attribute
+        """
         if type(x) is not int:
             raise TypeError('x must be an integer')
         if x < 0:
@@ -62,7 +81,10 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, y):
-        """Set the value of y attibute"""
+        """Set the value of y attibute
+        Args:
+            y (int): value for y attribute
+        """
         if type(y) is not int:
             raise TypeError('y must be an integer')
         if y < 0:
@@ -91,14 +113,15 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """Assigns arguments to each attribute
         Args:
-            *args: any number of arguments
-                    1st arg - id
-                    2nd arg - width
-                    3rd arg - height
-                    4th arg - x
-                    5th arg - y
+            *args (list): list of ordered arguments
+                1st arg - id
+                2nd arg - width
+                3rd arg - height
+                4th arg - x
+                5th arg - y
+            *kwargs (dict): key/value pair of attribute/value
         """
-        if len(args) != 0 and args is not None:
+        if len(args) > 0 and args is not None:
             if len(args) >= 1:
                 if type(args[0]) != int and args[0] is not None:
                     raise TypeError("id must be an int")
