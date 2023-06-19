@@ -12,3 +12,4 @@
 
 * models/square - Square class inheritting Rectangle class with constructor and `__str__` method
 * models/square - Added public setter and getter for size
+* models/square - Update method that assigns value to attributes
