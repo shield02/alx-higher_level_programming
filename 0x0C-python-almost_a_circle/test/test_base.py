@@ -164,5 +164,28 @@ class TestBase(TestCase):
         with open("Square.json", "r") as f:
             self.assertEqual(f.read(), result)
 
+    def test_save_to_file_errors(self):
+        """Test class method save_to_file with errors"""
+        with self.assertRaises(AttributeError) as e:
+            Base.save_to_file([Base(9), Base(5)])
+        self.assertEqual(
+            "'Base' object has no attribute 'to_dictionary'",
+            str(e.exception)
+        )
+
+        with self.assertRaises(AttributeError) as e:
+            Rectangle.save_to_file([3, 4])
+        self.assertEqual(
+            "'int' object has no attribute 'to_dictionary'",
+            str(e.exception)
+        )
+
+        with self.assertRaises(TypeError) as e:
+            Rectangle.save_to_file(5)
+        self.assertEqual(
+            "'int' object is not iterable",
+            str(e.exception)
+        )
+
 if __name__ == "__main__":
     TestCase.main()
