@@ -277,5 +277,15 @@ class TestBase(TestCase):
         self.assertFalse(square1 is square2)
         self.assertFalse(square1 == square2)
 
+    def test_create_wrong_types(self):
+        """Test class method create with wrong types."""
+        with self.assertRaises(TypeError) as e:
+            rect1 = "Hello"
+            rect2 = Rectangle.create(rect1)
+        self.assertEqual(
+            "create() takes 1 positional argument but 2 were given",
+            str(e.exception)
+        )
+
 if __name__ == "__main__":
     TestCase.main()
