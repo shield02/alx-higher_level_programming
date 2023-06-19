@@ -212,5 +212,20 @@ class TestRectangle(unittest.TestCase):
             rect.update(height=65, x=2, width="hi")
         self.assertEqual("width must be an integer", str(e.exception))
 
+    def test_to_dictionary(self):
+        """Test public method to_dictionary"""
+        rect1 = Rectangle(10, 2, 1, 9)
+        rect1_dictionary = rect1.to_dictionary()
+        test_dictionary = {'x': 1, 'y': 9, 'id': 1, 'height': 2, 'width': 10}
+        self.assertEqual(len(rect1_dictionary), len(test_dictionary))
+        self.assertEqual(type(rect1_dictionary), dict)
+
+        rect2 = Rectangle(1, 1)
+        rect2.update(**rect1_dictionary)
+        rect2_dictionary = rect2.to_dictionary()
+        self.assertEqual(len(rect1_dictionary), len(rect2_dictionary))
+        self.assertEqual(type(rect2_dictionary), dict)
+        self.assertFalse(rect1 == rect2)
+
 if __name__ == '__main__':
     unittest.main()
