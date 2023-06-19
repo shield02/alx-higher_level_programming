@@ -135,5 +135,15 @@ class TestRectangle(unittest.TestCase):
         result = "####\n####\n####\n####\n####\n"
         self.assertEqual(s, result)
 
+    def test_display_wrong_args(self):
+        """Test public method display with wrong args"""
+        with self.assertRaises(TypeError) as e:
+            rect1 = Rectangle(11, 5)
+            rect1.display(11)
+        self.assertEqual(
+            "display() takes 1 positional argument but 2 were given",
+            str(e.exception)
+        )
+
 if __name__ == '__main__':
     unittest.main()
