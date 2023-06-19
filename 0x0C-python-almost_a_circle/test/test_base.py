@@ -305,5 +305,26 @@ class TestBase(TestCase):
         for tup in zip(squares_input, squares_output):
             self.assertEqual(str(tup[0]), str(tup[1]))
 
+    def test_load_from_file_missing_file(self):
+        """Test class method load_from_file with missing files"""
+        if os.path.exists("Rectangle.json"):
+            os.remove("Rectangle.json")
+        if os.path.exists("Square.json"):
+            os.remove("Square.json")
+        if os.path.exists("Base.json"):
+            os.remove("Base.json")
+        rectangles_output = Rectangle.load_from_file()
+        self.assertEqual(rectangles_output, [])
+        squares_output = Square.load_from_file()
+        self.assertEqual(squares_output, [])
+
+    # def test_19_2(self):
+    #     """Test class method load_from_file with wrong args."""
+
+    #     s = "load_from_file() takes 1 positional argument but 2 were given"
+    #     with self.assertRaises(TypeError) as x:
+    #         list_rectangles_output = Rectangle.load_from_file("Hello")
+    #     self.assertEqual(s, str(x.exception))
+
 if __name__ == "__main__":
     TestCase.main()
