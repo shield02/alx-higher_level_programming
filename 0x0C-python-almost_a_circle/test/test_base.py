@@ -246,7 +246,7 @@ class TestBase(TestCase):
         self.assertEqual("json_string must be a string", str(e.exception))
 
     def test_from_json_to_string_wrong_agrs(self):
-        """Test static method from_json_string with wrong args."""
+        """Test static method from_json_string with wrong args"""
         msg1 = ("from_json_string() missing 1" +
               " required positional argument: 'json_string'")
 
@@ -262,7 +262,7 @@ class TestBase(TestCase):
         self.assertEqual(msg2, str(e.exception))
 
     def test_create_normal_types(self):
-        """Test class method create with normal types."""
+        """Test class method create with normal types"""
         rect1 = Rectangle(3, 5, 1)
         rect1_dictionary = rect1.to_dictionary()
         rect2 = Rectangle.create(**rect1_dictionary)
@@ -278,7 +278,7 @@ class TestBase(TestCase):
         self.assertFalse(square1 == square2)
 
     def test_create_wrong_types(self):
-        """Test class method create with wrong types."""
+        """Test class method create with wrong types"""
         with self.assertRaises(TypeError) as e:
             rect1 = "Hello"
             rect2 = Rectangle.create(rect1)
@@ -286,6 +286,24 @@ class TestBase(TestCase):
             "create() takes 1 positional argument but 2 were given",
             str(e.exception)
         )
+
+    def test_load_from_file_normal_types(self):
+        """Test class method load_from_file with normal types"""
+        rect1 = Rectangle(2, 5, 10, 3)
+        rect2 = Rectangle(5, 9)
+        rectangles_input = [rect1, rect2]
+        Rectangle.save_to_file(rectangles_input)
+        rectangles_output = Rectangle.load_from_file()
+        for tup in zip(rectangles_input, rectangles_output):
+            self.assertEqual(str(tup[0]), str(tup[1]))
+
+        square1 = Square(13, 6)
+        square2 = Square(17)
+        squares_input = [square1, square2]
+        Square.save_to_file(squares_input)
+        squares_output = Square.load_from_file()
+        for tup in zip(squares_input, squares_output):
+            self.assertEqual(str(tup[0]), str(tup[1]))
 
 if __name__ == "__main__":
     TestCase.main()
