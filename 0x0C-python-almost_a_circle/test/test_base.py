@@ -366,5 +366,19 @@ class TestBase(TestCase):
             "list_objs must be a list of instances",
             str(e.exception))
 
+    def test_save_to_file_wrong_args(self):
+        """Test class method save_to_file_csv with wrong args"""
+        msg1 = ("save_to_file_csv() missing 1 required" +
+              " positional argument: 'list_objs'")
+        with self.assertRaises(TypeError) as e:
+            Rectangle.save_to_file_csv()
+        self.assertEqual(msg1, str(e.exception))
+
+        msg2 = "save_to_file_csv() takes 2 positional arguments but 3 were given"
+        with self.assertRaises(TypeError) as e:
+            Rectangle.save_to_file_csv([Rectangle(12, 3), Rectangle(5, 8)], 76)
+        self.assertEqual(msg2, str(e.exception))
+
+
 if __name__ == "__main__":
     TestCase.main()
