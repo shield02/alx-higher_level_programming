@@ -223,5 +223,27 @@ class TestBase(TestCase):
         json_list_output_2 = Rectangle.from_json_string(None)
         self.assertEqual(json_list_output_2, [])
 
+    def test_from_json_to_string_wrong_types(self):
+        """Test static method from_json_string with wrong types"""
+        with self.assertRaises(TypeError) as e:
+            Rectangle.from_json_string([8, 9])
+        self.assertEqual("json_string must be a string", str(e.exception))
+
+        with self.assertRaises(TypeError) as e:
+            Rectangle.from_json_string(8)
+        self.assertEqual("json_string must be a string", str(e.exception))
+
+        with self.assertRaises(TypeError) as e:
+            Rectangle.from_json_string(9.6)
+        self.assertEqual("json_string must be a string", str(e.exception))
+
+        with self.assertRaises(TypeError) as e:
+            Rectangle.from_json_string((4, 5))
+        self.assertEqual("json_string must be a string", str(e.exception))
+
+        with self.assertRaises(TypeError) as e:
+            Rectangle.from_json_string({1: 'Hello', 2: 'Hi'})
+        self.assertEqual("json_string must be a string", str(e.exception))
+
 if __name__ == "__main__":
     TestCase.main()
