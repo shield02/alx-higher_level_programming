@@ -46,5 +46,19 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rect2.x, 3)
         self.assertEqual(rect2.y, 1)
 
+    def test_missing_arguments(self):
+        """Test for missing arguments"""
+        with self.assertRaises(TypeError) as e:
+            Rectangle(7)
+        self.assertEqual(
+            "__init__() missing 1 required positional argument: 'height'",
+            str(e.exception))
+
+        msg = ("__init__() missing 2 required positional" +
+             " arguments: 'width' and 'height'")
+        with self.assertRaises(TypeError) as x:
+            Rectangle()
+        self.assertEqual(msg, str(e.exception))
+
 if __name__ == '__main__':
     unittest.main()
