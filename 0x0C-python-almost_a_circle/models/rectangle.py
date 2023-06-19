@@ -23,6 +23,10 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
+    def __str__(self):
+        """Print string representation of the rectangle class"""
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+
     @property
     def width(self):
         """Accessor for the width variable"""
@@ -92,7 +96,10 @@ class Rectangle(Base):
         self.__y = y
 
     def area(self):
-        """Calculate the area of the rectangle"""
+        """Calculate the area of the rectangle
+        Returns:
+            area (int): area of the rectangle
+        """
         return int(self.__width * self.__height)
 
     def display(self):
@@ -105,10 +112,6 @@ class Rectangle(Base):
             for w in range(self.__width):
                 print("#", end="")
             print()
-
-    def __str__(self):
-        """Print string representation of the rectangle class"""
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
         """Assigns arguments to each attribute
@@ -127,13 +130,13 @@ class Rectangle(Base):
                     raise TypeError("id must be an int")
                 self.id = args[0]
             if len(args) > 1:
-                self.width = args[1]
+                self.__width = args[1]
             if len(args) > 2:
-                self.height = args[2]
+                self.__height = args[2]
             if len(args) > 3:
-                self.x = args[3]
+                self.__x = args[3]
             if len(args) > 4:
-                self.y = args[4]
+                self.__y = args[4]
         else:
             for attr, value in kwargs.items():
                 if attr == "id":
@@ -141,10 +144,18 @@ class Rectangle(Base):
                         raise TypeError("id must be an int")
                     self.id = value
                 if attr == "width":
-                    self.width = value
+                    self.__width = value
                 if attr == "height":
-                    self.height = value
+                    self.__height = value
                 if attr == "x":
-                    self.x = value
+                    self.__x = value
                 if attr == "y":
-                    self.y = value
+                    self.__y = value
+
+    def to_dictionary(self):
+        """Dictionary representation of the rectangle class
+        Returns:
+            (dict): key/value pairs of attribute/value
+        """
+        return {'x': self.__x, 'y': self.__y, 'id': self.id,
+                'height': self.__height, 'width': self.__width}
