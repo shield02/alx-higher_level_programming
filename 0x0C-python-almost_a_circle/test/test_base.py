@@ -201,7 +201,7 @@ class TestBase(TestCase):
             Rectangle.save_to_file([Rectangle(9, 4), Rectangle(8, 9)], 98)
         self.assertEqual(msg2, str(e.exception))
 
-    def test_from_json_to_string_types(self):
+    def test_from_json_to_string_normal_types(self):
         """Test static method from_json_string with normal types"""
         list_dicts = [
             {'id': 89, 'width': 10, 'height': 4},
