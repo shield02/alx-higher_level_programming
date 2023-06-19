@@ -25,7 +25,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """Print string representation of the rectangle class"""
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
 
     @property
     def width(self):
@@ -100,16 +100,16 @@ class Rectangle(Base):
         Returns:
             area (int): area of the rectangle
         """
-        return int(self.__width * self.__height)
+        return int(self.width * self.height)
 
     def display(self):
         """Print the rectangle instance using # character"""
-        for y in range(self.__y):
+        for y in range(self.y):
             print()
-        for h in range(self.__height):
-            for x in range(self.__x):
+        for h in range(self.height):
+            for x in range(self.x):
                 print(" ", end="")
-            for w in range(self.__width):
+            for w in range(self.width):
                 print("#", end="")
             print()
 
@@ -130,13 +130,13 @@ class Rectangle(Base):
                     raise TypeError("id must be an int")
                 self.id = args[0]
             if len(args) > 1:
-                self.__width = args[1]
+                self.width = args[1]
             if len(args) > 2:
-                self.__height = args[2]
+                self.height = args[2]
             if len(args) > 3:
-                self.__x = args[3]
+                self.x = args[3]
             if len(args) > 4:
-                self.__y = args[4]
+                self.y = args[4]
         else:
             for attr, value in kwargs.items():
                 if attr == "id":
@@ -144,18 +144,18 @@ class Rectangle(Base):
                         raise TypeError("id must be an int")
                     self.id = value
                 if attr == "width":
-                    self.__width = value
+                    self.width = value
                 if attr == "height":
-                    self.__height = value
+                    self.height = value
                 if attr == "x":
-                    self.__x = value
+                    self.x = value
                 if attr == "y":
-                    self.__y = value
+                    self.y = value
 
     def to_dictionary(self):
         """Dictionary representation of the rectangle class
         Returns:
             (dict): key/value pairs of attribute/value
         """
-        return {'x': self.__x, 'y': self.__y, 'id': self.id,
-                'height': self.__height, 'width': self.__width}
+        return {'x': self.x, 'y': self.y, 'id': self.id,
+                'height': self.height, 'width': self.width}
