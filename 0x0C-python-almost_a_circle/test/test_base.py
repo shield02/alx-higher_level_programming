@@ -326,5 +326,25 @@ class TestBase(TestCase):
             list_rectangles_output = Rectangle.load_from_file("Hello")
         self.assertEqual(msg, str(e.exception))
 
+    def test_save_to_file_csv_normal_types(self):
+        """Test class method save_to_file_csv with normal types"""
+        rect0 = Rectangle(9, 5, 3, 12)
+        rect1 = Rectangle(1, 7)
+
+        Rectangle.save_to_file_csv([rect0, rect1])
+
+        result = "id,width,height,x,y\n1,10,7,2,8\n2,2,4,0,0\n"
+        with open("Rectangle.csv", "r") as f:
+            self.assertEqual(len(f.read()), len(result))
+
+        square0 = Square(8, 1, 5, 10)
+        square1 = Square(4, 9)
+
+        Square.save_to_file_csv([square0, square1])
+
+        result = "id,size,x,y\n12,9,3,1\n3,6,7,0\n"
+        with open("Square.csv", "r") as f:
+            self.assertEqual(len(f.read()), len(result))
+
 if __name__ == "__main__":
     TestCase.main()
