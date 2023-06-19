@@ -67,7 +67,43 @@ class TestRectangle(unittest.TestCase):
         self.assertTrue(issubclass(Rectangle, Base))
         self.assertFalse(isinstance(Rectangle, Base))
 
+    def test_wrong_attributes(self):
+        """Test wrong attributes."""
+        with self.assertRaises(TypeError) as e:
+            Rectangle("Hello", 2)
+        self.assertEqual("width must be an integer", str(e.exception))
 
+        with self.assertRaises(TypeError) as e:
+            Rectangle(2, "World")
+        self.assertEqual("height must be an integer", str(e.exception))
+
+        with self.assertRaises(TypeError) as e:
+            Rectangle(1, 2, "Foo", 3)
+        self.assertEqual("x must be an integer", str(e.exception))
+
+        with self.assertRaises(TypeError) as e:
+            Rectangle(1, 2, 2, "Bar")
+        self.assertEqual("y must be an integer", str(e.exception))
+
+        with self.assertRaises(ValueError) as e:
+            Rectangle(0, 2)
+        self.assertEqual("width must be > 0", str(e.exception))
+
+        with self.assertRaises(ValueError) as e:
+            Rectangle(2, 0)
+        self.assertEqual("height must be > 0", str(e.exception))
+
+        with self.assertRaises(ValueError) as e:
+            Rectangle(2, -3)
+        self.assertEqual("height must be > 0", str(e.exception))
+
+        with self.assertRaises(ValueError) as e:
+            Rectangle(2, 5, -5, 6)
+        self.assertEqual("x must be >= 0", str(e.exception))
+
+        with self.assertRaises(ValueError) as e:
+            Rectangle(2, 8, 9, -65)
+        self.assertEqual("y must be >= 0", str(e.exception))
 
 if __name__ == '__main__':
     unittest.main()
