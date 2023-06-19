@@ -181,5 +181,15 @@ class TestRectangle(unittest.TestCase):
         rect.update()
         self.assertEqual(str(rect), "[Rectangle] (89) 4/5 - 2/3")
 
+    def test_update_wrong_types(self):
+        """Test public method update with wrong types"""
+        rect = Rectangle(10, 10, 10, 10)
+        with self.assertRaises(TypeError) as e:
+            rect.update("hi")
+        self.assertEqual("id must be an integer", str(e.exception))
+        with self.assertRaises(TypeError) as e:
+            rect.update(65, 89, "hi")
+        self.assertEqual("height must be an integer", str(e.exception))
+
 if __name__ == '__main__':
     unittest.main()
