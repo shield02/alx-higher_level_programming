@@ -165,5 +165,21 @@ class TestRectangle(unittest.TestCase):
         result = "\n\n  ##\n  ##\n  ##\n"
         self.assertEqual(s, result)
 
+    def test_update(self):
+        """Test public method update"""
+        rect = Rectangle(10, 10, 10, 10)
+        rect.update(89)
+        self.assertEqual(rect.id, 89)
+        rect.update(89, 2)
+        self.assertEqual(rect.width, 2)
+        rect.update(89, 2, 3)
+        self.assertEqual(rect.height, 3)
+        rect.update(89, 2, 3, 4)
+        self.assertEqual(rect.x, 4)
+        rect.update(89, 2, 3, 4, 5)
+        self.assertEqual(rect.y, 5)
+        rect.update()
+        self.assertEqual(str(rect), "[Rectangle] (89) 4/5 - 2/3")
+
 if __name__ == '__main__':
     unittest.main()
