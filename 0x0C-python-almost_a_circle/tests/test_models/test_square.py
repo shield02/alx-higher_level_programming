@@ -127,5 +127,17 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(square.id, 89)
         self.assertEqual(square.y, 1)
 
+    def test_square_update_wrong_types(self):
+        """Test for update method on Square with wrong types"""
+        square = Square(9)
+
+        with self.assertRaises(TypeError) as e:
+            square.update(2, 3, 4, "hello")
+        self.assertEqual("y must be an integer", str(e.exception))
+
+        with self.assertRaises(TypeError) as e:
+            square.update("hello", 8, 9)
+        self.assertEqual("id must be an int", str(e.exception))
+
 if __name__ == '__main__':
     unittest.main()
