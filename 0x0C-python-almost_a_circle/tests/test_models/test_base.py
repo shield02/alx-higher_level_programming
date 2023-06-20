@@ -217,7 +217,7 @@ class TestBase(unittest.TestCase):
         self.assertCountEqual(json_list_output, result)
         self.assertEqual(type(json_list_output), list)
 
-        json_list_output_1 = Rectangle.from_json_string('')
+        json_list_output_1 = Rectangle.from_json_string('[]')
         self.assertEqual(json_list_output_1, [])
 
         json_list_output_2 = Rectangle.from_json_string(None)
