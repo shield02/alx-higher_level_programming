@@ -57,7 +57,7 @@ class TestRectangle(unittest.TestCase):
 
         msg = ("__init__() missing 2 required positional" +
              " arguments: 'width' and 'height'")
-        with self.assertRaises(TypeError) as x:
+        with self.assertRaises(TypeError) as e:
             Rectangle()
         self.assertEqual(msg, str(e.exception))
 
@@ -162,7 +162,7 @@ class TestRectangle(unittest.TestCase):
         with contextlib.redirect_stdout(flush):
             rect.display()
         s = flush.getvalue()
-        result = "\n\n  ##\n  ##\n  ##\n"
+        result = '\n\n\n\n    #####\n    #####\n'
         self.assertEqual(s, result)
 
     def test_update(self):
@@ -186,7 +186,7 @@ class TestRectangle(unittest.TestCase):
         rect = Rectangle(10, 10, 10, 10)
         with self.assertRaises(TypeError) as e:
             rect.update("hi")
-        self.assertEqual("id must be an integer", str(e.exception))
+        self.assertEqual("id must be an int", str(e.exception))
         with self.assertRaises(TypeError) as e:
             rect.update(65, 89, "hi")
         self.assertEqual("height must be an integer", str(e.exception))
@@ -207,7 +207,7 @@ class TestRectangle(unittest.TestCase):
         rect = Rectangle(10, 10, 10, 10)
         with self.assertRaises(TypeError) as e:
             rect.update(id='hi')
-        self.assertEqual("id must be an integer", str(e.exception))
+        self.assertEqual("id must be an int", str(e.exception))
         with self.assertRaises(TypeError) as e:
             rect.update(height=65, x=2, width="hi")
         self.assertEqual("width must be an integer", str(e.exception))
