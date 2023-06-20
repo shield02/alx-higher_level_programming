@@ -154,5 +154,14 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(type(square2_dictionary), dict)
         self.assertFalse(square1 == square2)
 
+    def test_to_dictionary_wrong_args(self):
+        """Test public method to_dictionary with wrong args"""
+        msg = "to_dictionary() takes 1 positional argument but 2 were given"
+
+        with self.assertRaises(TypeError) as e:
+            square = Square(10, 2, 1, 9)
+            square_dictionary = square.to_dictionary("Hi")
+        self.assertEqual(msg, str(e.exception))
+
 if __name__ == '__main__':
     unittest.main()
