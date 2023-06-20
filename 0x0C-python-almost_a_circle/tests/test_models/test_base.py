@@ -130,8 +130,8 @@ class TestBase(unittest.TestCase):
         rect1 = Rectangle(8, 1)
 
         Rectangle.save_to_file([rect0, rect1])
-        result = ('[{"y": 5, "x": 3, "id": 1, "width": 15, "height": 6},' +
-               ' {"y": 0, "x": 0, "id": 2, "width": 8, "height": 1}]')
+        result = ('[{"y": 5, "x": 3, "id": 1, "width": 15, "height": 6}, ' +
+               '  {"y": 0, "x": 0, "id": 2, "width": 8, "height": 1}]')
         with open("Rectangle.json", "r") as f:
             self.assertEqual(len(f.read()), len(result))
 
@@ -149,7 +149,7 @@ class TestBase(unittest.TestCase):
         square1 = Square(8, 11)
 
         Square.save_to_file([square0, square1])
-        result = ('[{"id": 4, "size": 13, "x": 1, "y": 5},' +
+        result = ('[{"id": 4, "size": 13, "x": 1, "y": 5}, ' +
                ' {"id": 3, "size": 8, "x": 11, "y": 0}]')
         with open("Square.json", "r") as f:
             self.assertEqual(len(f.read()), len(result))
@@ -225,25 +225,28 @@ class TestBase(unittest.TestCase):
 
     def test_from_json_to_string_wrong_types(self):
         """Test static method from_json_string with wrong types"""
+        msg = ("the JSON object must be str, bytes or " +
+                "bytearray, not ")
+
         with self.assertRaises(TypeError) as e:
             Rectangle.from_json_string([8, 9])
-        self.assertEqual("json_string must be a string", str(e.exception))
+        self.assertEqual(msg + "list", str(e.exception))
 
         with self.assertRaises(TypeError) as e:
             Rectangle.from_json_string(8)
-        self.assertEqual("json_string must be a string", str(e.exception))
+        self.assertEqual(msg + "int", str(e.exception))
 
         with self.assertRaises(TypeError) as e:
             Rectangle.from_json_string(9.6)
-        self.assertEqual("json_string must be a string", str(e.exception))
+        self.assertEqual(msg + "float", str(e.exception))
 
         with self.assertRaises(TypeError) as e:
             Rectangle.from_json_string((4, 5))
-        self.assertEqual("json_string must be a string", str(e.exception))
+        self.assertEqual(msg + "tuple", str(e.exception))
 
         with self.assertRaises(TypeError) as e:
             Rectangle.from_json_string({1: 'Hello', 2: 'Hi'})
-        self.assertEqual("json_string must be a string", str(e.exception))
+        self.assertEqual(msg + "dict", str(e.exception))
 
     def test_from_json_to_string_wrong_agrs(self):
         """Test static method from_json_string with wrong args"""
@@ -328,8 +331,8 @@ class TestBase(unittest.TestCase):
 
     def test_save_to_file_csv_normal_types(self):
         """Test class method save_to_file_csv with normal types"""
-        rect0 = Rectangle(9, 5, 3, 12)
-        rect1 = Rectangle(1, 7)
+        rect0 = Rectangle(10, 7, 2, 8)
+        rect1 = Rectangle(2, 4)
 
         Rectangle.save_to_file_csv([rect0, rect1])
 
@@ -337,8 +340,8 @@ class TestBase(unittest.TestCase):
         with open("Rectangle.csv", "r") as f:
             self.assertEqual(len(f.read()), len(result))
 
-        square0 = Square(8, 1, 5, 10)
-        square1 = Square(4, 9)
+        square0 = Square(9, 3, 1, 12)
+        square1 = Square(6, 7)
 
         Square.save_to_file_csv([square0, square1])
 
