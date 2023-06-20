@@ -384,9 +384,9 @@ class TestBase(unittest.TestCase):
 
     def test_load_from_file_csv_missing_file(self):
         """Test class method load_from_file_csv with missing files"""
-        os.remove("Rectangle.csv")
-        os.remove("Square.csv")
-        os.remove("Base.csv")
+        # os.remove("Rectangle.csv")
+        # os.remove("Square.csv")
+        # os.remove("Base.csv")
 
         rectangles_output = Rectangle.load_from_file_csv()
         self.assertEqual(rectangles_output, [])
