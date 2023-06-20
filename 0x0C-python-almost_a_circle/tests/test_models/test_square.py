@@ -139,5 +139,20 @@ class TestSquare(unittest.TestCase):
             square.update("hello", 8, 9)
         self.assertEqual("id must be an int", str(e.exception))
 
+    def test_to_dictionary(self):
+        """Test public method to_dictionary"""
+        square1 = Square(10, 2, 1)
+        square1_dictionary = square1.to_dictionary()
+        test_dictionary = {'x': 2, 'y': 1, 'id': 1, 'size': 10}
+        self.assertEqual(len(square1_dictionary), len(test_dictionary))
+        self.assertEqual(type(square1_dictionary), dict)
+
+        square2 = Square(1, 1)
+        square2.update(**square1_dictionary)
+        square2_dictionary = square2.to_dictionary()
+        self.assertEqual(len(square1_dictionary), len(square2_dictionary))
+        self.assertEqual(type(square2_dictionary), dict)
+        self.assertFalse(square1 == square2)
+
 if __name__ == '__main__':
     unittest.main()
