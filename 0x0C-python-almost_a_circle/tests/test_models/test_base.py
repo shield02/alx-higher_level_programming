@@ -14,7 +14,7 @@ class TestBase(unittest.TestCase):
     def setUp(self):
         Base.__nb_objects = 0
 
-    def test_1_0(self):
+    def test_id(self):
         """Test for id"""
         b0 = Base()
         self.assertEqual(b0.id, 1)
