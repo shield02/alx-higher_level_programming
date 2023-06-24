@@ -13,15 +13,15 @@ class TestBase(unittest.TestCase):
 
     def setUp(self):
         Base.__nb_objects = 0
-
-    def test_id(self):
-        """Test for id"""
         b0 = Base()
         self.assertEqual(b0.id, 1)
         b1 = Base()
         self.assertEqual(b1.id, 2)
         b2 = Base(12)
         self.assertEqual(b2.id, 12)
+
+    def test_id(self):
+        """Test for id"""
         b3 = Base(0)
         self.assertEqual(b3.id, 0)
         b4 = Base(-1)
@@ -124,7 +124,7 @@ class TestBase(unittest.TestCase):
             Base.to_json_string([{3, 5}], [{2, 8}])
         self.assertEqual(pos_args2, str(e.exception))
 
-    def test_save_to_file_type(self):
+    def test_save_to_file_normal_types(self):
         """Test class method save_to_file with normal types"""
         rect0 = Rectangle(15, 6, 3, 5)
         rect1 = Rectangle(8, 1)
