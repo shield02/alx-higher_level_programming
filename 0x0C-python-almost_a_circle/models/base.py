@@ -6,6 +6,7 @@ import json
 import csv
 import turtle
 
+
 class Base:
     """Base class for the project
     To manage id attribute project wide and to avoid code duplication
@@ -33,7 +34,7 @@ class Base:
         Args:
             list_dictionaries (list): list of dictionaries
         Returns:
-            JSON (str): 
+            JSON (str):
         """
         if list_dictionaries == [] or list_dictionaries is None:
             return "[]"
@@ -65,7 +66,7 @@ class Base:
         if json_string == "[]" or json_string is None:
             return []
         return json.loads(json_string)
-    
+
     @classmethod
     def create(cls, **dictionary):
         """Returns an instance with all the already set attributes
@@ -74,7 +75,7 @@ class Base:
             cls (string): class name
             **dictionary (dict): to be used as **kwargs
         Returns:
-            (string): 
+            (string):
         """
         if dictionary != {} and dictionary:
             if cls.__name__ == 'Square':
@@ -104,7 +105,8 @@ class Base:
     def save_to_file_csv(cls, list_objs):
         """Serializes list of objects to csv file
         Args:
-            list_objs (list): list of class instances inheriting from Base class
+            list_objs (list): list of class instances
+            inheriting from Base class
         """
         filename = cls.__name__ + ".csv"
         with open(filename, 'w', newline='') as f:
