@@ -4,6 +4,7 @@
 
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """Square class
     Inherit the Rectangle class
@@ -11,7 +12,7 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """Sqaure constructor
         Args:
-            size (int): 
+            size (int):
         """
         super().__init__(size, size, x, y, id)
 
@@ -23,7 +24,7 @@ class Square(Rectangle):
     def size(self):
         """Accessor for the size variable"""
         return self.width
-    
+
     @size.setter
     def size(self, value):
         """Set the value of the size attribute
