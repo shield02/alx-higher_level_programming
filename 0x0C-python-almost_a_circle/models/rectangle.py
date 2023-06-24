@@ -4,6 +4,7 @@
 
 from models.base import Base
 
+
 class Rectangle(Base):
     """Rectangle class
     Inherits the Base class
@@ -25,7 +26,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """Print string representation of the rectangle class"""
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        return (f"[Rectangle] ({self.id}) {self.x}/{self.y} - \
+                    {self.width}/{self.height}")
 
     @property
     def width(self):
