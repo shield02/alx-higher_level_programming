@@ -12,7 +12,7 @@ class TestBase(unittest.TestCase):
     """Test cases for Base class"""
 
     def setUp(self):
-        Base.__nb_objects = 0
+        # Base.__nb_objects = 0
         b0 = Base()
         self.assertEqual(b0.id, 1)
         b1 = Base()
