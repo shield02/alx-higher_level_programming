@@ -8,4 +8,5 @@
 * 5-full_table - script that prints the full description of a table from a database
 * 6-list_values - script that lists all rows of a table from the database
 * 7-insert_value - script that inserts a new row into a table from the current database
+* 8-count_89 - script that displays the number of records with id = 89 in the table first_table of the database
 
