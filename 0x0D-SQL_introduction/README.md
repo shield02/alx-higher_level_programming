@@ -4,4 +4,5 @@
 * 1-1-create_database_if_missing - script that creates the database if it doesn't exist
 * 2-remove_database - script that deletes the database if it exist
 * 3-list_tables - script that lists all the tables of a database, database name passed as argument
+* 4-first_table - script that creates a table in the current database
 
