@@ -7,4 +7,5 @@
 * 4-first_table - script that creates a table in the current database
 * 5-full_table - script that prints the full description of a table from a database
 * 6-list_values - script that lists all rows of a table from the database
+* 7-insert_value - script that inserts a new row into a table from the current database
 
