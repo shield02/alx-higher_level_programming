@@ -17,4 +17,4 @@
 * 14-average - script that computes the score average of all records in the table second_table of the current database
 * 15-groups -script that lists the number of records with the same score in the table second_table of the current database
 * 16-no_link - script that lists all records of the table second_table of the current database
-
+* 100-move_to_utf8 - script that converts hbtn_0c_0 database to UTF8
