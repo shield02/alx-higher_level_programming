@@ -11,5 +11,6 @@
 * 8-count_89 - script that displays the number of records with id = 89 in the table first_table of the database
 * 9-full_creation - script that creates a table second_table in the database and add multiple records
 * 10-top_score - script that lists all records of the table, orderd by one of the columns
+* 11-best_score - script that lists all records with a score >= 10 in the table second_table of the current database
 
 
