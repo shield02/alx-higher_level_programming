@@ -18,6 +18,6 @@
 * 15-groups -script that lists the number of records with the same score in the table second_table of the current database
 * 16-no_link - script that lists all records of the table second_table of the current database
 * 100-move_to_utf8 - script that converts hbtn_0c_0 database to UTF8
-* 101-avg_temperatures - import a dummy script into the database, calculate the average and order by descending temperature
-* 102-top_city - import a dummy script into the database, display the top 3 of cities temperature during July and August ordered by temperature (descending)
-
+* 101-avg_temperatures - from a dummy script, calculate the average and order by descending temperature
+* 102-top_city - from a dummy script, display the top 3 of cities temperature during July and August ordered by temperature (descending)
+* 103-max_state - from a dummy script, display the max temperature of each state (ordered by State name)
