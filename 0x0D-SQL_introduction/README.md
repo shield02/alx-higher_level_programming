@@ -16,4 +16,5 @@
 * 13-change_class - script that removes all records with a score <= 5 in the table second_table of the current database
 * 14-average - script that computes the score average of all records in the table second_table of the current database
 * 15-groups -script that lists the number of records with the same score in the table second_table of the current database
+* 16-no_link - script that lists all records of the table second_table of the current database
 
