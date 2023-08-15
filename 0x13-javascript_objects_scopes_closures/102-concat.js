@@ -2,9 +2,9 @@
 
 const fs = require('fs');
 
-const contentA = fs.readFileSync(process.argv[2], 'utf8', function (err, result) { if (err) console.log('error', err); });
-const contentB = fs.readFileSync(process.argv[3], 'utf8', function (err, result) { if (err) console.log('error', err); });
+const first = fs.readFileSync(process.argv[2], 'utf8', function (err) { if (err) console.log('error', err); });
+const second = fs.readFileSync(process.argv[3], 'utf8', function (err) { if (err) console.log('error', err); });
 
-const contentC = contentA.concat(contentB);
+const third = first.concat(second);
 
-fs.writeFile(process.argv[4], contentC, 'utf8', function (err, result) { if (err) console.log('error', err); });
+fs.writeFile(process.argv[4], third, 'utf8', function (err) { if (err) console.log('error', err); });
