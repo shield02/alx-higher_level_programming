@@ -7,4 +7,3 @@ const myValue = Object.entries(dict).reduce((acc, [key, value]) => {
   return acc;
 }, {});
 console.log(myValue);
-
