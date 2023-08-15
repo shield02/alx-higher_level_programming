@@ -5,4 +5,3 @@ exports.logMe = function (item) {
   console.log(args + ': ' + item);
   args++;
 };
-
