@@ -5,14 +5,11 @@ hbtn_0e_100_usa database"""
 if __name__ == "__main__":
 
     import sys
-    from relationship_state import State
+    from relationship_state import State, Base
     from relationship_city import City
     from sqlalchemy import create_engine
     from sqlalchemy.orm import Session
     from sqlalchemy.schema import Table
-    from sqlalchemy.ext.declarative import declarative_base
-
-    Base = declarative_base()
 
     engine = create_engine(f'mysql+mysqldb://{sys.argv[1]}:\
                            {sys.argv[2]}@localhost/{sys.argv[3]}',
