@@ -5,7 +5,11 @@ const id = process.argv[2];
 const endpoint = `https://swapi-api.alx-tools.com/api/films/${id}`;
 const opt = { method: 'GET' };
 
-
+/**
+ * Get name of a character from starwars using promises
+ * @param {*} url url string
+ * @returns Promise<string> (name)
+ */
 const getName = (url) => new Promise((resolve, reject) => {
   request(url, opt, (err, { statusCode: code, body: res }) => {
     if (err) reject(console.log(err));
